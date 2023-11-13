@@ -1,0 +1,39 @@
+<!-- ****************CSS Display Properties************** -->
+
+<!-- Block Elements-> properties:new line ie. taken whole left to right space, Extreme Right, Custom W/H, custom 
+    padding and margin supported  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* inline takes only necessarfy space */
+      span {
+        /* Span is bydefault inline */
+        border: 2px solid green;
+        width: 300px;
+        height: 400px;
+        /* we cant apply custom height and width on inline  */
+        /* margin: 10px;
+        padding: 15px; */
+        /* we can change it by following */
+        border: 2px solid green;
+
+        width: 300px;
+        height: 200px;
+        margin: 10px;
+        padding: 15px;
+        /* display: block; */
+        display: inline-block; /*working as inline*/
+      }
+    </style>
+  </head>
+  <body>
+    <span> This is Akshay Sumbare </span>
+
+    <span> This is Akshay Sumbare 2.0 </span>
+  </body>
+</html>

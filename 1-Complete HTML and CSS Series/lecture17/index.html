@@ -1,0 +1,99 @@
+<!-- ******************CSS Position Property ***************** 
+  Position Property in CSS sets how an element is positioned in a document  -->
+<!-- eg. static, relative, absolute, fixed, stricking etc. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        border: 2px solid black;
+      }
+      img {
+        margin: 10px;
+      }
+      .image2 {
+        /********************* relative Positioning************** */
+        /* position: relative; /*here relative positioning is related to current window ,old space after the  */
+        /* spacing maintain */
+        /* top: 100px; */
+        /* left: 100px; */
+        
+        /*********absolute positioning****************/
+        /* position: absolute;
+        top: 100px; overlap the image */
+
+        /* in case of absolute pozitionng the positioning is respect to relative window and it applied  to its closest
+       element eg. in same div , section etc.  gap is not maintain in case of absolute positioning  */
+     
+        
+       /* *************Fixed POstioning************* */
+      }
+      .container{
+        position: relative; 
+        height: 1000px;
+      }
+      .image4{
+         position: fixed; /* shows fixed image respect to other  */
+      
+      }
+        
+      /* ******Used of Tickey********* 
+       Stickey image only fixed until the parent container when container change it will move with container while
+        fixed image are through the window fixed   */
+
+      /* .image3{
+        position: sticky;
+        top: 100px;
+      }
+    
+    
+      .box{
+        background-color:aquamarine;
+        height: 5000px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="krishna1.jpeg"
+        alt="firstimage"
+        width="300px"
+        height="300px"
+        class="image1"
+      />
+
+      <img
+        src="krishna2.jpg"
+        alt="Secondtimage"
+        width="300px"
+        height="300px"
+        class="image2"
+      />
+
+      <img
+        src="krishna3.jpeg"
+        alt="Thirdimage"
+        width="300px"
+        height="300px"
+        class="image3"
+      />
+
+      <img
+        src="krishna4.jpeg"
+        alt="Fourthimage"
+        width="300px"
+        height="300px"
+        class="image4"
+      />
+    </div>
+    <div class="box">
+      
+    </div>
+  </body>
+</html> */

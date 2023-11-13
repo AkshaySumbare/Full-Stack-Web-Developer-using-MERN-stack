@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        background-color: beige;
+        border: 1px solid black;
+        margin: 2px;
+        padding: 6px;
+        display: flex;
+      }
+      .box {
+        height: 200px;
+        width: 200px;
+        border: 1px solid black;
+        margin: 2px;
+        padding: 6px;
+      }
+      @media (min-width:640px) {
+        .container{
+            flex-direction: row;
+        }
+    }
+      @media (max-width:640px) {
+        .container{
+            flex-direction: column;
+        }
+    }
+    #box3{
+        
+       align-self: center;
+    }
+    #box1{
+      background-color: aqua;  
+    }
+    #box2{
+     background-color: blue;
+    }
+    #box3{
+       /* background-color: black; */
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <div class="box" id="box1"><p>Text1</p></div>
+        <div class="box" id="box2"><p>Text2</p></div>
+      </div>
+      <div class="box" id="box3" ><img  src="volvo.webp "  alt="" height="200px" width="200px"></div>
+    </div>
+  </body>
+</html>

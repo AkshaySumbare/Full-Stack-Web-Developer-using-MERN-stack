@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="index.css" /> -->
+    <script src="./index.js"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Mulish"
+      rel="stylesheet"
+    />
+    <style>
+      .resume__columns {
+        display: flex;
+        flex-direction: row;
+        flex-direction: row-reverse;
+      }
+      /* .Akshay{
+  display: flex;
+  flex-direction: column;
+  
+} */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .body {
+        width: 100vh;
+        width: 100vw;
+
+        /* border: black 1px solid; */
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+        src: local("Open Sans Regular"), local("OpenSans-Regular"),
+          url("https://fonts.gstatic.com/s/opensans/v16/mem8YaGs126MiZpBA-UFVZ0b.woff2")
+            format("woff2");
+      }
+
+      @font-face {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+        src: local("Roboto"), local("Roboto-Regular"),
+          url("https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxK.woff2")
+            format("woff2");
+      }
+
+      @page {
+        size: A4;
+      }
+
+      body {
+        /* -webkit-print-color-adjust: exact;
+  color-adjust: exact;  */
+        background-color: #fff;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        display: flex;
+        justify-content: center;
+      }
+
+      .btn-print {
+        z-index: 1;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
+
+      .resume {
+        display: block;
+        font-family: "Roboto", sans-serif;
+        font-size: 13.0736px;
+        font-weight: 400;
+        line-height: 1.5;
+        min-height: 1090.41px;
+      }
+
+      .resume h1 {
+        font-size: 2.86em;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+      }
+
+      .resume h2 {
+        font-size: 1.43em;
+        font-weight: 600;
+        line-height: 1;
+        margin-bottom: 0;
+      }
+
+      .resume p {
+        margin-bottom: 1em;
+      }
+
+      .resume p:last-child {
+        margin-bottom: 0;
+      }
+
+      .resume ul {
+        padding-left: 20px;
+      }
+
+      /* .resume .resume__header, */
+      .resume .resume__section {
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.95em;
+      }
+
+      /* .resume .resume__header {
+  padding: 6em 4em 0;
+} */
+
+      .resume .resume__section {
+        margin-bottom: 4em;
+      }
+
+      .resume .resume__section:last-child {
+        padding-bottom: 0;
+      }
+
+      .resume .resume__section-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.43em;
+      }
+
+      .resume .resume__section-title > i {
+        margin-right: 0.63em;
+        font-size: 1.14em;
+        background-color: #5695cd;
+        color: #fff;
+        border: 0.25em solid #aacae6;
+        border-radius: 50%;
+        width: 2.51em;
+        height: 2.51em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.6;
+      }
+
+      .resume .resume__section-title > h2 {
+        margin-top: 0;
+        font-size: 1.5em;
+      }
+
+      .resume .resume__columns {
+        overflow: hidden;
+        padding: 4em;
+        padding-top: 0;
+      }
+
+      .resume .resume__main {
+        float: left;
+        width: 75%;
+        padding-left: 6em;
+      }
+
+      .resume .resume__side {
+        float: left;
+        width: 25%;
+      }
+
+      .resume .other-info p > b {
+        color: #555;
+      }
+
+      .resume .info-item {
+        margin-bottom: 0.2em;
+        font-weight: 300;
+      }
+
+      .resume .info-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .resume .info-label {
+        display: inline-block;
+        padding-right: 0.63em;
+        font-size: 1.14em;
+        min-width: 2.19em;
+        text-align: center;
+      }
+
+      .resume .info-label i {
+        color: #5695cd;
+      }
+
+      .resume .xp-item {
+        margin-bottom: 4em;
+      }
+
+      .resume .xp-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .resume .xp-job {
+        font-size: 1.14em;
+        font-weight: 600;
+        line-height: 1.25;
+      }
+
+      .resume .xp-job span,
+      .resume .xp-job small {
+        font-weight: 400;
+      }
+
+      .resume .xp-job small {
+        font-size: 0.9em;
+      }
+
+      .resume .xp-date {
+        font-size: 0.8em;
+        margin-top: 0.3em;
+        margin-bottom: 1em;
+        color: #5695cd;
+      }
+
+      .resume .extra {
+        margin-bottom: 2em;
+      }
+
+      .resume .extra:last-child {
+        margin-bottom: 0;
+      }
+
+      .resume .extra-info small {
+        color: #666;
+        display: inline-block;
+        font-size: 0.7em;
+      }
+
+      .resume .extra-details,
+      .resume .extra-details__progress {
+        border-radius: 6px;
+      }
+
+      .resume .extra-details {
+        margin-top: 0.5em;
+        background-color: #d1d9e1;
+        width: 100%;
+        height: 5px;
+        position: relative;
+      }
+
+      .resume .extra-details__progress {
+        background-color: #5695cd;
+        height: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .resume .lang-item {
+        margin-bottom: 2em;
+      }
+
+      .resume .lang-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .resume .lang-label {
+        width: 8em;
+      }
+
+      @media print {
+        body {
+          min-width: initial !important;
+        }
+
+        .btn-print {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="body">
+    <div class="resume_side">
+      <div class="two-column resume">
+        <section
+          class="resume__section resume__header"
+          style="background-color: #8bc6ec"
+        >
+          <div
+            class="resume__content"
+            style="
+              display: flex;
+              flex-direction: column;
+              font-size: medium;
+              font-weight: normal;
+              /* border-bottom: black solid 1px; */
+              margin-top: 9px;
+            "
+          >
+            <h2 style="margin-left: 40px; margin-top: 20px">
+              NAME: AKSHAY SUMBARE
+            </h2>
+            <div class="info-item">
+              <span class="info-label"
+                ><i class="fa fa-location-arrow"></i></span
+              ><span class="info-text">
+                Email:
+                <a
+                  href="mailto: sumbareakshay@gmail.com"
+                  target="_blank"
+                  style="text-decoration: none"
+                  >sumbareakshay@gmail.com</a
+                ></span
+              >
+            </div>
+            <div class="info-item">
+              <span class="info-label"><i class="fa fa-envelope"></i></span
+              ><span class="info-text"
+                >contact:
+                <a
+                  href="8805316032 "
+                  target="_blank"
+                  style="text-decoration: none"
+                  >+91-8805316032</a
+                ></span
+              >
+            </div>
+            <div class="info-item">
+              <span class="info-label"><i class="fa fa-phone"></i></span
+              ><span class="info-text"
+                >Github:<a
+                  href="https://github.com/AkshaySumbare"
+                  target="_blank"
+                  style="text-decoration: none"
+                >
+                  github.com/AkshaySumbare</a
+                ></span
+              >
+            </div>
+          </div>
+        </section>
+        <div class="resume__columns">
+          <div
+            class="resume__main"
+            style=" margin-left: 50px"
+          >
+            <section class="resume__section resume__summary">
+              <div class="resume__content">
+                <div class="resume__section-title">
+                  <i class="fa fa-pencil-square-o"></i>
+
+                  <div class="Akshay">
+                    <div><h2>Work Experience</h2></div>
+                    <div class="text-xl"><h3>Projects</h3></div>
+                  </div>
+                </div>
+                <div class="other">
+                  <div class="other-info">
+                    <ul>
+                      <li style="font-size: medium; font-weight: normal">
+                        <p style="margin-top: 28px">
+                          <span
+                            ><h4>
+                              Password Generator App :
+                              <a
+                                href="https://github.com/AkshaySumbare/Password-Generator-App "
+                                target="_blank"
+                                ><img
+                                  src="./25231.png"
+                                  alt=""
+                                  height="25px"
+                                  width="25px"
+                              /></a></h4
+                          ></span>
+                          I successfully spearheaded the development of a
+                          cutting-edge password generator app, demonstrating my
+                          expertise in software development, cybersecurity, and
+                          user experience.The development stack includes
+                          JavaScript, HTML,and CSS to create a functional and
+                          visually appealing weather app.
+                        </p>
+                      </li>
+
+                      <li style="font-size: medium; font-weight: normal">
+                        <p style="margin-top: 40px">
+                          <span><h4>Weather App :</h4></span>
+                          Developed a dynamic weather application by leveraging
+                          Geolocation API and Weather API ,providing user with
+                          real-time weather information based on their location.
+                          The development stack includes JavaScript, HTML,and
+                          CSS to create a functional and visually appealing
+                          weather app.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="resume__section resume__experience">
+              <div class="resume__content">
+                <div>
+                  <i class="fa fa-briefcase"></i>
+                  <h2>Education</h2>
+                </div>
+                <div class="xp-item">
+                  <div>
+                    <span style="font-weight: bold; font-size: medium"
+                      >Goverment College Of Engineering And Research, Avsari
+                      Khurd Pune, India</span
+                    >
+                  </div>
+                  <div>
+                    <span style="font-size: medium; font-weight: bold"
+                      >2019 - 2023</span
+                    >
+                  </div>
+                  <div style="font-size: medium; font-weight: normal">
+                    <ul>
+                      <li>Branch : Electronic And Telecommunication(ENTC)</li>
+                      <li>CGPA : 8.09</li>
+                      <p></p>
+                    </ul>
+                  </div>
+                </div>
+                <div class="xp-item">
+                  <div>
+                    <span style="font-size: medium; font-weight: bold"
+                      >Janta Vidya Mandir,India</span
+                    >
+                    <br /><span style="font-size: medium; font-weight: bold"
+                      >2018 - 2019</span
+                    >
+                  </div>
+                  <div style="font-size: medium; font-weight: normal">
+                    <ul>
+                      <li>Class XII</li>
+                      <li>Aggregate: 74.46%</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="resume__side">
+            <section class="resume__section resume__skills">
+              <div class="resume__content">
+                <div class="resume__section-title">
+                  <i class="fa fa-align-center"></i>
+                  <h2>Skills</h2>
+                </div>
+                <div class="resume__text">
+                  <div class="extra">
+                    <div class="extra-info">
+                      <span style="font-weight: bold; font-size: medium"
+                        >C++</span
+                      >
+                    </div>
+                    <div class="extra-details">
+                      <div
+                        class="extra-details__progress"
+                        style="width: 100%"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="extra">
+                    <div class="extra-info">
+                      <span style="font-weight: bold; font-size: medium"
+                        >Data Structure and Algorithm</span
+                      >
+                    </div>
+                    <div class="extra-details">
+                      <div
+                        class="extra-details__progress"
+                        style="width: 80%"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="extra">
+                    <div class="extra-info">
+                      <span style="font-weight: bold; font-size: medium"
+                        >JavaScript</span
+                      >
+                    </div>
+                    <div class="extra-details">
+                      <div
+                        class="extra-details__progress"
+                        style="width: 80%"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="extra">
+                    <div class="extra-info">
+                      <span style="font-weight: bold; font-size: medium"
+                        >HTML</span
+                      >
+                    </div>
+                    <div class="extra-details">
+                      <div
+                        class="extra-details__progress"
+                        style="width: 100%"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="extra">
+                    <div class="extra-info">
+                      <span style="font-weight: bold; font-size: medium"
+                        >CSS</span
+                      >
+                    </div>
+                    <div class="extra-details">
+                      <div
+                        class="extra-details__progress"
+                        style="width: 82%"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="extra">
+                    <div class="extra-info">
+                      <span style="font-weight: bold; font-size: medium"
+                        >Tailwindcss</span
+                      >
+                    </div>
+                    <div class="extra-details">
+                      <div
+                        class="extra-details__progress"
+                        style="width: 80%"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="extra">
+                    <div class="extra-info">
+                      <span style="font-weight: bold; font-size: medium"
+                        >MERN Stack Development</span
+                      >
+                    </div>
+                    <div class="extra-details">
+                      <div
+                        class="extra-details__progress"
+                        style="width: 90%"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="resume__section resume__languages">
+              <div class="resume__content">
+                <div class="resume__section-title">
+                  <i class="fa fa-globe"></i>
+                  <h2>Languages</h2>
+                </div>
+                <div class="extra">
+                  <div class="extra-info">
+                    <span style="font-weight: bold; font-size: medium"
+                      >English</span
+                    >
+                  </div>
+                  <div class="extra-details">
+                    <div
+                      class="extra-details__progress"
+                      style="width: 100%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="extra">
+                  <div class="extra-info">
+                    <span style="font-weight: bold; font-size: medium"
+                      >Marathi</span
+                    >
+                  </div>
+                  <div class="extra-details">
+                    <div
+                      class="extra-details__progress"
+                      style="width: 100%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="extra">
+                  <div class="extra-info">
+                    <span style="font-weight: bold; font-size: medium"
+                      >Hindi</span
+                    >
+                  </div>
+                  <div class="extra-details">
+                    <div
+                      class="extra-details__progress"
+                      style="width: 85%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Code injected by live-server -->
+    <script>
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading."
+        );
+      }
+      // ]]>
+    </script>
+  </body>
+</html>

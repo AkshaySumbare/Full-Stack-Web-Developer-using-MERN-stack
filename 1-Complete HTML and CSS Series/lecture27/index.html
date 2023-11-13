@@ -1,0 +1,65 @@
+<!-- ********************Card website Project using HTML and CSS***************** -->\
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        background-color: #8bc6ec;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .card {
+        width: 360px;
+        height: 600px;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align:center;
+        gap: 20px;
+        
+      }
+      .card img {
+        height: 57%;
+        padding: 20px;
+        color: blue;
+        border-radius: 10px;
+      }
+      .card h2 {
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+      .card p{
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <img src="./img.jpg" alt="" />
+
+        <h2>Improve your front end skills buy developing Projects</h2>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
+          voluptas ea provident impedit voluptatum sapiente nisi quia
+          repellendus.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

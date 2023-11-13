@@ -1,0 +1,57 @@
+<!-- Shadow Effects in CSS -->
+<!-- Types of Shadow:1) Box shadow 2) text shadow  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: beige;
+            height: 900px;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;    
+            /* both align-items and align self center are same we can do anything to center it  */
+        }
+        .box{
+            background-color: aquamarine;
+            width: 330px;
+            height: 330px;
+            border: 1px solid brown;
+            margin: 5px;
+            padding: 5px;
+            /* align-self: center; */
+            /* Shadow for outer side */
+            /* box-shadow: 10px 15px 5px  100px rgb(42, 42, 189); */
+
+            /* Shadow for inner side  */
+            box-shadow: inset 10px 15px 50px 25px blueviolet;
+            /* We can also give multiple shadows for that add another color */
+        }
+        
+     /* same for text ie. write 'text-shadow' and used it similar way */
+     #head1{
+        text-shadow: 2px 3px white;
+     }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <img src="./volvo.webp" alt="" height="100px" width="100px" />
+        <h2 id="head1">Welcome This is Volvo XC90</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident,
+          eius. Ratione aperiam dignissimos, dolorum vitae, consequatur velit
+          unde exercitationem dicta ipsum sunt fuga maxime non voluptatibus
+          sequi? Mollitia, nulla eveniet.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
